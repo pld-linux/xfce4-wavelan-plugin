@@ -1,5 +1,5 @@
-Summary:	A wavelan plugin for the XFce panel
-Summary(pl):	Wtyczka sieci radiowych dla panelu XFce
+Summary:	A wavelan plugin for the Xfce panel
+Summary(pl):	Wtyczka sieci radiowych dla panelu Xfce
 Name:		xfce4-wavelan-plugin
 Version:	0.4.1
 Release:	1
