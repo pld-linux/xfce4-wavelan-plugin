@@ -1,4 +1,3 @@
-# $Revision $, $Date $
 Summary:	A wavelan plugin for the XFce panel
 Summary(pl):	Wtyczka sieci radiowych dla panelu XFce
 Name:		xfce4-wavelan-plugin
@@ -15,12 +14,12 @@ Requires:	xfce4-panel >= 4.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This plugin is used to display stats from a wireless lan
-interface (signal state, signal quality, network name (SSID)).
+This plugin is used to display stats from a wireless LAN interface
+(signal state, signal quality, network name (SSID)).
 
 %description -l pl
-Wtyczka ta wy¶wietla statystyki interfejsów sieci radiowych
-(stan sygna³u, jako¶æ sygna³u, nazwa sieci (SSID)).
+Wtyczka ta wy¶wietla statystyki interfejsów sieci radiowych (stan
+sygna³u, jako¶æ sygna³u, nazwa sieci (SSID)).
 
 %prep
 %setup -q
