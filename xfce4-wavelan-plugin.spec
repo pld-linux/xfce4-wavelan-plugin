@@ -10,6 +10,7 @@ Source0:	http://goodies.xfce.org/releases/xfce4-wavelan-plugin/%{name}-%{version
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-modules
