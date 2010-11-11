@@ -1,17 +1,13 @@
 Summary:	A wavelan plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sieci radiowych dla panelu Xfce
 Name:		xfce4-wavelan-plugin
-Version:	0.5.4
-Release:	2
+Version:	0.5.5
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://goodies.xfce.org/releases/xfce4-wavelan-plugin/%{name}-%{version}.tar.gz
-# Source0-md5:	b13993facb6b7a25ca81ac8cde9a9100
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	1fa00ad9f24cc29536cb7622016c6a5e
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	intltool
-BuildRequires:	libtool
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-modules
 BuildRequires:	pkgconfig
@@ -32,12 +28,6 @@ sygnału, jakość sygnału, nazwa sieci (SSID)).
 %setup -q
 
 %build
-%{__intltoolize}
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-static
 
