@@ -8,6 +8,8 @@ Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.5/%{name}-%{version}.tar.bz2
 # Source0-md5:	1fa00ad9f24cc29536cb7622016c6a5e
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
+BuildRequires:	gettext-devel
+BuildRequires:	intltool
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-modules
 BuildRequires:	pkgconfig
