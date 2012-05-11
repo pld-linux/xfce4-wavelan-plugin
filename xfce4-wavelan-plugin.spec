@@ -1,19 +1,14 @@
 Summary:	A wavelan plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sieci radiowych dla panelu Xfce
 Name:		xfce4-wavelan-plugin
-Version:	0.5.6
-Release:	2
+Version:	0.5.10
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	b23a4c9c2a206242ee4db8186dd01801
-Patch0:		%{name}-ui.patch
+# Source0-md5:	a4cd20ef471123936e762a139f1025e1
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
-BuildRequires:	autoconf >= 2.63
-BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	intltool
-BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-modules
@@ -33,15 +28,8 @@ sygnału, jakość sygnału, nazwa sieci (SSID)).
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__intltoolize}
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
 	--disable-static
 
@@ -53,6 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/*.la
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
 
 %find_lang %{name}
@@ -63,5 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*
-%{_datadir}/xfce4/panel-plugins/*.desktop
+%attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libwavelan.so
+%{_datadir}/xfce4/panel/plugins/wavelan.desktop
