@@ -1,12 +1,12 @@
 Summary:	A wavelan plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sieci radiowych dla panelu Xfce
 Name:		xfce4-wavelan-plugin
-Version:	0.5.10
-Release:	2
+Version:	0.5.11
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	a4cd20ef471123936e762a139f1025e1
+# Source0-md5:	50514bb286f1ed6761a1b36832bb7fe3
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
 BuildRequires:	gettext-devel
 BuildRequires:	libxfce4ui-devel
