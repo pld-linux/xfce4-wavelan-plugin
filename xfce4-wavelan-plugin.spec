@@ -1,21 +1,24 @@
 Summary:	A wavelan plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sieci radiowych dla panelu Xfce
 Name:		xfce4-wavelan-plugin
-Version:	0.6.3
+Version:	0.6.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	2b92af07078570e4720bd3bda2d70e5a
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
+Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	62c2a962efb519b26303691f52e509b6
+URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin
 BuildRequires:	gettext-tools
-BuildRequires:	libxfce4ui-devel
+BuildRequires:	glib2-devel >= 1:2.50.0
+BuildRequires:	gtk+3-devel >= 3.22.0
+BuildRequires:	libxfce4ui-devel >= 4.16.0
+BuildRequires:	libxfce4util-devel >= 4.16.0
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-modules
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-dev-tools >= 4.14.0
-BuildRequires:	xfce4-panel-devel >= 4.14.0
-Requires:	xfce4-panel >= 4.14.0
+BuildRequires:	xfce4-dev-tools >= 4.16.0
+BuildRequires:	xfce4-panel-devel >= 4.16.0
+Requires:	xfce4-panel >= 4.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/*.la
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ur_PK}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie,ur_PK}
 
 %find_lang %{name}
 
